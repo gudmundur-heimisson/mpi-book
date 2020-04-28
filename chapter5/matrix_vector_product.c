@@ -37,8 +37,8 @@ int main(int argc, char* argv[]) {
   MPI_Comm_rank(MPI_COMM_WORLD, &comm_rank);
   MPI_Comm_size(MPI_COMM_WORLD, &comm_size);
 
-  int num_cols = comm_size;
-  int num_rows = 8;
+  int num_cols = 2*comm_size;
+  int num_rows = 3*comm_size;
   float matrix[num_rows][num_cols];
   float vector[num_cols];
   float true_result[num_rows];
